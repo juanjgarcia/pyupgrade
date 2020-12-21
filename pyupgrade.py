@@ -416,7 +416,8 @@ def _fix_py2_compatible(contents_text: str) -> str:
         return contents_text
     for i, token in reversed_enumerate(tokens):
         if token.offset in visitor.dicts:
-            _process_dict_comp(tokens, i, visitor.dicts[token.offset])
+            pass
+            # _process_dict_comp(tokens, i, visitor.dicts[token.offset])
         elif token.offset in visitor.set_empty_literals:
             pass
             # _process_set_empty_literal(tokens, i)
