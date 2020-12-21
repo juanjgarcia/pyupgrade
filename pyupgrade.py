@@ -418,9 +418,11 @@ def _fix_py2_compatible(contents_text: str) -> str:
         if token.offset in visitor.dicts:
             _process_dict_comp(tokens, i, visitor.dicts[token.offset])
         elif token.offset in visitor.set_empty_literals:
-            _process_set_empty_literal(tokens, i)
+            pass
+            # _process_set_empty_literal(tokens, i)
         elif token.offset in visitor.sets:
-            _process_set_literal(tokens, i, visitor.sets[token.offset])
+            pass
+            # _process_set_literal(tokens, i, visitor.sets[token.offset])
         elif token.offset in visitor.is_literal:
             _process_is_literal(tokens, i, visitor.is_literal[token.offset])
     return tokens_to_src(tokens)
